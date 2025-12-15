@@ -1,0 +1,95 @@
+/* animasi awal */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* custom component */
+.skill {
+  padding: 8px 14px;
+  background: rgba(56,189,248,0.15);
+  color: rgb(56,189,248);
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 24px;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* FOTO 4x6 DENGAN FRAME MODERN */
+.foto-4x6 {
+  width: 240px;        /* proporsional layar */
+  height: 360px;       /* rasio 4x6 (2:3) */
+  border-radius: 24px;
+  border: 4px solid rgb(56,189,248); /* sky-400 */
+  box-shadow: 0 20px 40px rgba(56,189,248,0.25);
+  overflow: hidden;
+  background: #020617;
+}
+
+.foto-4x6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.foto-4x6:hover img {
+  transform: scale(1.05);
+}
+
+/* Education Animation */
+.edu-card {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease;
+}
+
+.edu-card:nth-child(2) {
+  transform: translateX(40px);
+}
+
+.edu-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.edu-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
