@@ -1,110 +1,69 @@
 function showContact() {
   const el = document.getElementById("contact");
-
+  
+  // Memasukkan HTML dengan desain premium ke dalam element #contact
   el.innerHTML = `
-<div class="max-w-4xl mx-auto mt-8 grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 animate-fade-in-up">
 
-  <!-- EMAIL -->
-  <a href="mailto:aldi.alfian861@email.com"
-     class="bg-slate-800 p-6 rounded-xl text-center
-            hover:bg-slate-700 hover:-translate-y-1 transition">
-
-    <img src="icons/email.png"
-         alt="Email"
-         class="w-10 h-10 mx-auto mb-3">
-
-    <p class="text-sm text-slate-400">Email</p>
-    <p class="text-sky-400 font-medium text-sm break-all">
-      aldi.alfian861@email.com
-    </p>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aldi.alfian861@email.com" 
+   target="_blank"
+     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-sky-500/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-sky-500/10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <img src="icons/email.png" alt="Email" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">Email</p>
+    <p class="text-sky-400 font-medium text-xs md:text-sm break-all">aldi.alfian861@email.com</p>
+    <div class="absolute bottom-0 left-0 w-0 h-1 bg-sky-500 transition-all duration-500 group-hover:w-full"></div>
   </a>
 
-  <!-- LINKEDIN -->
-  <a href="https://www.linkedin.com/in/aldialfian"
-     target="_blank"
-     class="bg-slate-800 p-6 rounded-xl text-center
-            hover:bg-slate-700 hover:-translate-y-1 transition">
-
-    <img src="icons/linkedin.png"
-         alt="LinkedIn"
-         class="w-10 h-10 mx-auto mb-3">
-
-    <p class="text-sm text-slate-400">LinkedIn</p>
-    <p class="text-sky-400 font-medium text-sm">
-      aldialfian
-    </p>
+  <a href="https://www.linkedin.com/in/aldialfian" target="_blank"
+     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-blue-500/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <img src="icons/linkedin.png" alt="LinkedIn" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">LinkedIn</p>
+    <p class="text-blue-400 font-medium text-xs md:text-sm">aldialfian</p>
+    <div class="absolute bottom-0 left-0 w-0 h-1 bg-blue-500 transition-all duration-500 group-hover:w-full"></div>
   </a>
 
-  <!-- GITHUB -->
-  <a href="https://github.com/aldialfian861"
-     target="_blank"
-     class="bg-slate-800 p-6 rounded-xl text-center
-            hover:bg-slate-700 hover:-translate-y-1 transition">
-
-    <img src="icons/github.png"
-         alt="GitHub"
-         class="w-10 h-10 mx-auto mb-3">
-
-    <p class="text-sm text-slate-400">GitHub</p>
-    <p class="text-sky-400 font-medium text-sm">
-      aldialfian861
-    </p>
+  <a href="https://github.com/aldialfian861" target="_blank"
+     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-white/20 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/5 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <img src="icons/github.png" alt="GitHub" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">GitHub</p>
+    <p class="text-slate-200 font-medium text-xs md:text-sm">aldialfian861</p>
+    <div class="absolute bottom-0 left-0 w-0 h-1 bg-white transition-all duration-500 group-hover:w-full"></div>
   </a>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/628563147718"
-     target="_blank"
-     class="bg-slate-800 p-6 rounded-xl text-center
-            hover:bg-slate-700 hover:-translate-y-1 transition">
-
-    <img src="icons/whatsapp.png"
-         alt="WhatsApp"
-         class="w-10 h-10 mx-auto mb-3">
-
-    <p class="text-sm text-slate-400">WhatsApp</p>
-    <p class="text-sky-400 font-medium text-sm">
-      +62 856-314-7718
-    </p>
+  <a href="https://wa.me/628563147718" target="_blank"
+     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-green-500/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <img src="icons/whatsapp.png" alt="WhatsApp" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">WhatsApp</p>
+    <p class="text-green-400 font-medium text-xs md:text-sm">+62 856-314-7718</p>
+    <div class="absolute bottom-0 left-0 w-0 h-1 bg-green-500 transition-all duration-500 group-hover:w-full"></div>
   </a>
 
-  <!-- INSTAGRAM -->
-  <a href="https://instagram.com/aldialfnn"
-     target="_blank"
-     class="bg-slate-800 p-6 rounded-xl text-center
-            hover:bg-slate-700 hover:-translate-y-1 transition">
-
-    <img src="icons/instagram.png"
-         alt="Instagram"
-         class="w-10 h-10 mx-auto mb-3">
-
-    <p class="text-sm text-slate-400">Instagram</p>
-    <p class="text-sky-400 font-medium text-sm">
-      @aldialfnn
-    </p>
+  <a href="https://instagram.com/aldialfnn" target="_blank"
+     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-pink-500/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <img src="icons/instagram.png" alt="Instagram" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">Instagram</p>
+    <p class="text-pink-400 font-medium text-xs md:text-sm">@aldialfnn</p>
+    <div class="absolute bottom-0 left-0 w-0 h-1 bg-pink-500 transition-all duration-500 group-hover:w-full"></div>
   </a>
 
-    <!-- TIKTOK -->
-  <a href="https://tiktok.com/@aldialfnn"
-     target="_blank"
-     class="bg-slate-800 p-6 rounded-xl text-center
-            hover:bg-slate-700 hover:-translate-y-1 transition">
-
-    <img src="icons/tiktok.png"
-         alt="TIKTOK"
-         class="w-10 h-10 mx-auto mb-3">
-
-    <p class="text-sm text-slate-400">TikTok</p>
-    <p class="text-sky-400 font-medium text-sm">
-      @aldialfnn
-    </p>
+  <a href="https://tiktok.com/@aldialfnn" target="_blank"
+     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-white/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-200/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <img src="icons/tiktok.png" alt="TikTok" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">TikTok</p>
+    <p class="text-slate-200 font-medium text-xs md:text-sm">@aldialfnn</p>
+    <div class="absolute bottom-0 left-0 w-0 h-1 bg-white transition-all duration-500 group-hover:w-full"></div>
   </a>
 </div>
-
-
   `;
 
-  el.classList.remove("opacity-0");
-  el.classList.add("opacity-100");
+  // Memberikan efek muncul perlahan
+  el.style.opacity = "1";
 }
 
 /* ANIMASI FOTO 4x6 */
