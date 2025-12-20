@@ -268,34 +268,83 @@ function closeLightbox() {
   lightboxImg.src = "";
 }
 
-// Slider Portfolio Website
+// Slider Portfolio Website – Mobile + Desktop + Auto-slide
 const trackWeb = document.querySelector('.gallery-track-web');
 const prevWeb = document.querySelector('.prev-web');
 const nextWeb = document.querySelector('.next-web');
 
-let indexWeb = 0;
-const maxIndexWeb = trackWeb.children.length - 1;
+if (trackWeb && prevWeb && nextWeb) {
+  const slidesWeb = trackWeb.querySelectorAll('img');
+  let indexWeb = 0;
+  const totalWeb = slidesWeb.length;
+  let autoSlide;
 
-// Fungsi untuk update posisi slider
-function updateSlider() {
-  trackWeb.style.transform = `translateX(-${indexWeb * 100}%)`;
+  function updateSlider() {
+    trackWeb.style.transform = `translateX(-${indexWeb * 100}%)`;
+  }
+
+  function nextSlide() {
+    indexWeb = (indexWeb + 1) % totalWeb;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    indexWeb = (indexWeb - 1 + totalWeb) % totalWeb;
+    updateSlider();
+  }
+
+  prevWeb.addEventListener('click', () => {
+    prevSlide();
+    restartAuto();
+  });
+
+  nextWeb.addEventListener('click', () => {
+    nextSlide();
+    restartAuto();
+  });
+
+  // AUTO SLIDE
+  function startAuto() {
+    autoSlide = setInterval(nextSlide, 4000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoSlide);
+  }
+
+  function restartAuto() {
+    stopAuto();
+    startAuto();
+  }
+
+  // Pause saat hover desktop
+  trackWeb.addEventListener('mouseenter', stopAuto);
+  trackWeb.addEventListener('mouseleave', startAuto);
+
+  // Swipe HP
+  let startX = 0, currentX = 0, isDragging = false;
+
+  trackWeb.addEventListener('touchstart', e => {
+    stopAuto();
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  trackWeb.addEventListener('touchmove', e => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX;
+  });
+
+  trackWeb.addEventListener('touchend', () => {
+    const diff = startX - currentX;
+    if (diff > 50) nextSlide();
+    else if (diff < -50) prevSlide();
+    isDragging = false;
+    startAuto();
+  });
+
+  // Inisialisasi
+  updateSlider();
+  startAuto();
 }
-
-// Tombol prev
-prevWeb.addEventListener('click', () => {
-  indexWeb = (indexWeb === 0) ? maxIndexWeb : indexWeb - 1;
-  updateSlider();
-});
-
-// Tombol next
-nextWeb.addEventListener('click', () => {
-  indexWeb = (indexWeb === maxIndexWeb) ? 0 : indexWeb + 1;
-  updateSlider();
-});
-
-// Auto-slide setiap 4 detik
-setInterval(() => {
-  indexWeb = (indexWeb === maxIndexWeb) ? 0 : indexWeb + 1;
-  updateSlider();
-}, 4000);
 
