@@ -32,33 +32,6 @@ function showContact() {
     <p class="text-slate-200 font-medium text-xs md:text-sm">aldialfian861</p>
     <div class="absolute bottom-0 left-0 w-0 h-1 bg-white transition-all duration-500 group-hover:w-full"></div>
   </a>
-
-  <a href="https://wa.me/628563147718" target="_blank"
-     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-green-500/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/10 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-    <img src="icons/whatsapp.png" alt="WhatsApp" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
-    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">WhatsApp</p>
-    <p class="text-green-400 font-medium text-xs md:text-sm">+62 856-314-7718</p>
-    <div class="absolute bottom-0 left-0 w-0 h-1 bg-green-500 transition-all duration-500 group-hover:w-full"></div>
-  </a>
-
-  <a href="https://instagram.com/aldialfnn" target="_blank"
-     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-pink-500/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-    <img src="icons/instagram.png" alt="Instagram" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
-    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">Instagram</p>
-    <p class="text-pink-400 font-medium text-xs md:text-sm">@aldialfnn</p>
-    <div class="absolute bottom-0 left-0 w-0 h-1 bg-pink-500 transition-all duration-500 group-hover:w-full"></div>
-  </a>
-
-  <a href="https://tiktok.com/@aldialfnn" target="_blank"
-     class="group relative bg-slate-900/50 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/5 text-center transition-all duration-500 hover:border-white/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-200/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-    <img src="icons/tiktok.png" alt="TikTok" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
-    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-1 font-bold">TikTok</p>
-    <p class="text-slate-200 font-medium text-xs md:text-sm">@aldialfnn</p>
-    <div class="absolute bottom-0 left-0 w-0 h-1 bg-white transition-all duration-500 group-hover:w-full"></div>
-  </a>
 </div>
   `;
 
